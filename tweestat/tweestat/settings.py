@@ -23,14 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4+e9bru$h_o-v=0#8bq-hi7gsqlob4$ugve#m+(ba+utb)p1$('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','DjangoServer-env.kitmm6mdre.eu-central-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1','tweestat-env.mfbcph4vm3.eu-central-1.elasticbeanstalk.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'stats.apps.StatsConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,3 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/var/tmp/django_cache',
+    }
+}

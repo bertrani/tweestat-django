@@ -1,0 +1,41 @@
+<html>
+   <body>
+      <div align="center", style="padding-top:20%">
+         <form name = "form" action ="{% url 'stats' %}"
+            method = "POST" >{% csrf_token %}
+                  <select name="field" id="field" style="width:190px; margin_top:100px;">
+                     <option value="has_coordinates">has_coordinates</option>
+                     <option value="has_place">has_place</option>
+                     <option value="is_quote">is_quote</option>
+                     <option value="is_retweeted">is_retweeted</option>
+                     <option value="is_sensitive">is_sensitive</option>
+                     <option value="no_characters">no_characters</option>
+                     <option value="no_hashtags">no_hashtags</option>
+                     <option value="no_urls ">no_urls </option>
+                     <option value="usr_favourites">usr_favourites</option>
+                     <option value="usr_followers">usr_followers</option>
+                     <option value="usr_friends">usr_friends</option>
+                     <option value="usr_statuses">usr_statuses</option>
+                     <option value="total_tweets">total_tweets</option>
+                  </select>
+            <div>
+                  <input type = "date" style = "margin-top:1%;"
+                         placeholder = "From" name = "start_date" />
+                  <input type = "time" placeholder = "From" name = "start_time" />
+            </div>
+            <div>
+                  <input type = "date" style = "margin-top:1%;"
+                     placeholder = "Until" name = "end_date" />
+                  <input type = "time" placeholder = "From" name = "end_time" />
+            </div>
+            <div>
+                  <button style = "border:0px; background-color:#4285F4; margin-top:1%;
+                     height:25px; width:10%;" type = "submit"
+                     value = "Generate" >
+                     <strong>Generate</strong>
+                  </button>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

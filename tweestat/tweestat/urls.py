@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     #path('polls/', include('polls.urls')),
     path('stats/', include('stats.urls')),
+    path('about', views.about, name='about'),
+    path('faq', views.faq, name='faq'),
 ]

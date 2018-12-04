@@ -25,7 +25,7 @@ SECRET_KEY = '4+e9bru$h_o-v=0#8bq-hi7gsqlob4$ugve#m+(ba+utb)p1$('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','tweestat-env.mfbcph4vm3.eu-central-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.tweestat.com']
 
 
 # Application definition

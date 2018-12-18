@@ -43,8 +43,6 @@ class Graph:
         else:
             my_range = (0, max_value * 2)
         graph = pygal.DateTimeLine(
-            #x_label_rotation=90,
-            #truncate_label=11,
             x_value_formatter=lambda dt: dt.strftime('%d.%m.%Y, %H:%M:%S'),
             range=my_range,
             title="{} \n From {} to {}".format(self.field_name, self.start, self.end),
@@ -101,11 +99,11 @@ class Graph:
         elif self.field == "lang_ru":
             return "Fraction of russian Tweets"
         elif self.field == "source_android":
-            return "Fraction of Tweets which are send from an Android device"
+            return "Fraction of Tweets which are send from the Android app"
         elif self.field == "source_iphone":
-            return "Fraction of Tweets which send from an iPhone"
+            return "Fraction of Tweets which send from the iPhone app"
         elif self.field == "source_ipad":
-            return "Fraction of Tweets which send from an iPad"
+            return "Fraction of Tweets which send from the iPad app"
         elif self.field == "source_web":
             return "Fraction of Tweets which are send from the web client"
         elif self.field == "usr_favourites":

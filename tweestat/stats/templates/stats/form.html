@@ -7,7 +7,7 @@
                 text-decoration: none;
               }
         a:hover {color: black;}
-        button[type = "submit"]:hover {color: white;}
+        button[type = "submit"]:hover {border: 1px solid black}
     </style>
    <body>
    <div style="position:relative">
@@ -74,7 +74,7 @@
                  Select the beginning date:
              </div>
             <div>
-                  <input type = "date" style = "margin-top:2px;"
+                  <input type = "date" value="2018-11-01" style = "margin-top:2px;"
                          placeholder = "From" name = "start_date" />
                   <input type = "time" placeholder = "From" name = "start_time" value="00:00"/>
             </div>
@@ -82,12 +82,12 @@
                  Select the ending date:
              </div>
             <div>
-                  <input type = "date" style = "margin-top:2px;"
+                  <input type = "date" value="2018-12-01" style = "margin-top:2px;"
                      placeholder = "Until" name = "end_date" />
                   <input type = "time" placeholder = "From" name = "end_time" value="00:00"/>
             </div>
             <div>
-                  <button style = "border:0px; background-color:#4285F4; margin-top:15px;
+                  <button style = "border:0px; background-color:#4285F4; color:white; margin-top:15px;
                      height:25px; width:10%;" type = "submit"
                      value = "Generate" >
                      <strong>Generate</strong>
